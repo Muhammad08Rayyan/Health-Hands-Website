@@ -2,102 +2,819 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
+      {/* Hero Section */}
+      <section className="relative pt-8 pb-16 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Navigation Header */}
+          <div className="flex justify-between items-center mb-12">
+            <div className="flex items-center space-x-3">
+              <Image
+                src="/Logo.png"
+                alt="Health Hands Pharmacy"
+                width={48}
+                height={48}
+                className="rounded-lg"
+              />
+              <div>
+                <span className="text-xl font-bold text-gray-900">Health Hands Pharmacy</span>
+              </div>
+            </div>
+            <div className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
+              <a href="#about" className="text-gray-600 hover:text-blue-600 transition-colors cursor-pointer">About</a>
+              <a href="#services" className="text-gray-600 hover:text-blue-600 transition-colors cursor-pointer">Services</a>
+              <a href="#contact" className="text-gray-600 hover:text-blue-600 transition-colors cursor-pointer">Contact</a>
+            </div>
+            <div>
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl cursor-pointer">
+                Download App
+              </button>
+            </div>
+          </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[75vh]">
+            {/* Left Content */}
+            <div className="space-y-10">
+              <div className="space-y-6 mt-8">
+                <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                  Trusted Healthcare Partner
+                </div>
+                <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                  Your Trusted Pharmacy,
+                  <span className="text-blue-600 block">Now in Your Pocket</span>
+                </h1>
+                <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
+                  Authentic medicines, expert care, advanced health tools — all from one trusted source.
+                </p>
+              </div>
+
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 mt-8">
+                <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl cursor-pointer">
+                  Visit Our Store
+                </button>
+                <button className="border-2 border-gray-300 hover:border-blue-600 text-gray-700 hover:text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 cursor-pointer">
+                  View All Services
+                </button>
+              </div>
+
+              {/* Trust Badge Strip */}
+              <div className="flex flex-wrap items-center gap-6 pt-6 border-t border-gray-200">
+                <div className="flex items-center space-x-2">
+                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                    <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  </div>
+                  <span className="text-sm font-medium text-gray-700">Licensed Pharmacy</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                    <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <span className="text-sm font-medium text-gray-700">100% Genuine Medicines</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
+                    <svg className="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                  </div>
+                  <span className="text-sm font-medium text-gray-700">Professional Care</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Content - Phone Mockup */}
+            <div className="relative lg:flex justify-center items-center hidden">
+              <div className="relative">
+                {/* Phone Frame - Modern Android Style */}
+                <div className="w-72 h-[580px] bg-black rounded-[2.5rem] p-2 shadow-2xl relative">
+                  {/* Screen */}
+                  <div className="w-full h-full bg-gradient-to-br from-blue-50 to-green-50 rounded-[2.2rem] relative overflow-hidden">
+                    {/* Status Bar */}
+                    <div className="flex justify-between items-center px-6 py-3 text-black text-xs">
+                      <span className="font-medium">9:41</span>
+                      <div className="flex items-center space-x-1">
+                        <div className="flex space-x-0.5">
+                          <div className="w-1 h-2 bg-black rounded-full"></div>
+                          <div className="w-1 h-2 bg-black rounded-full"></div>
+                          <div className="w-1 h-2 bg-black rounded-full opacity-60"></div>
+                          <div className="w-1 h-2 bg-black rounded-full opacity-30"></div>
+                        </div>
+                        <div className="w-6 h-3 border border-black rounded-sm ml-1">
+                          <div className="w-4 h-2 bg-black rounded-sm ml-0.5 mt-0.5"></div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* App Content */}
+                    <div className="px-5 pt-2">
+                      {/* App Header */}
+                      <div className="flex items-center space-x-3 mb-5">
+                        <Image
+                          src="/Logo.png"
+                          alt="Health Hands Pharmacy"
+                          width={36}
+                          height={36}
+                          className="rounded-lg"
+                        />
+                        <div>
+                          <h3 className="font-bold text-gray-900">Health Hands</h3>
+                          <p className="text-xs text-gray-600">Your Health Partner</p>
+                        </div>
+                      </div>
+                      
+                      {/* Search Bar */}
+                      <div className="bg-white rounded-xl p-3 mb-4 shadow-sm">
+                        <div className="flex items-center space-x-2 text-gray-400">
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                          </svg>
+                          <span className="text-xs">Search medicines...</span>
+                        </div>
+                      </div>
+                      
+                      {/* Feature Cards */}
+                      <div className="space-y-3">
+                        <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl p-3 text-white">
+                          <div className="flex items-center justify-between">
+                            <div>
+                              <h4 className="font-semibold text-sm">AI Assistant</h4>
+                              <p className="text-xs opacity-90">Health guidance</p>
+                            </div>
+                            <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-xl p-3 text-white">
+                          <div className="flex items-center justify-between">
+                            <div>
+                              <h4 className="font-semibold text-sm">Scan Medicine</h4>
+                              <p className="text-xs opacity-90">Instant identification</p>
+                            </div>
+                            <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div className="bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl p-3 text-white">
+                          <div className="flex items-center justify-between">
+                            <div>
+                              <h4 className="font-semibold text-sm">Health Records</h4>
+                              <p className="text-xs opacity-90">Track your data</p>
+                            </div>
+                            <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl p-3 text-white">
+                          <div className="flex items-center justify-between">
+                            <div>
+                              <h4 className="font-semibold text-sm">Prescription Upload</h4>
+                              <p className="text-xs opacity-90">Easy ordering</p>
+                            </div>
+                            <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        {/* Background Decorations */}
+        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+        <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-green-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-64 h-64 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+      </section>
+
+      {/* Experience Section - Professional Journey */}
+      <section className="py-32 bg-white relative overflow-hidden">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Elegant Header */}
+          <div className="text-center mb-24">
+            <div className="inline-block">
+              <h2 className="text-4xl lg:text-5xl font-light text-gray-900 mb-6 tracking-wide">
+                The Health Hands <span className="font-semibold text-blue-600">Experience</span>
+              </h2>
+              <div className="w-16 h-0.5 bg-blue-600 mx-auto"></div>
+            </div>
+          </div>
+
+          {/* Three-Step Journey */}
+          <div className="space-y-32">
+            {/* Step 1 - Trust */}
+            <div className="group">
+              <div className="grid lg:grid-cols-12 gap-12 items-center">
+                <div className="lg:col-span-7 space-y-8">
+                  <div className="flex items-center space-x-4 mb-8">
+                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                      <span className="text-blue-600 font-semibold">01</span>
+                    </div>
+                    <div className="h-px bg-gray-200 flex-1"></div>
+                  </div>
+                  <h3 className="text-3xl font-light text-gray-900 mb-6">
+                    Built on <span className="font-semibold">Trust</span>
+                  </h3>
+                  <p className="text-xl text-gray-600 leading-relaxed mb-8">
+                    Every prescription, every consultation, every interaction is grounded in decades of pharmaceutical expertise. 
+                    We're not just licensed—we're trusted custodians of your health.
+                  </p>
+                  <div className="flex items-center space-x-8">
+                    <div className="text-center">
+                      <div className="text-2xl font-semibold text-gray-900">Licensed</div>
+                      <div className="text-sm text-gray-500">Pharmacy</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-semibold text-gray-900">100%</div>
+                      <div className="text-sm text-gray-500">Genuine</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-semibold text-gray-900">Expert</div>
+                      <div className="text-sm text-gray-500">Care</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="lg:col-span-5">
+                  <div className="relative">
+                    <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8 shadow-lg border border-blue-100">
+                      <div className="w-16 h-16 bg-blue-500 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                      </div>
+                      <h4 className="text-lg font-semibold text-gray-900 text-center mb-3">Professional Standards</h4>
+                      <p className="text-gray-600 text-center text-sm leading-relaxed">
+                        Temperature-controlled storage, verified suppliers, and rigorous quality checks ensure every medication meets the highest standards.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 2 - Innovation */}
+            <div className="group">
+              <div className="grid lg:grid-cols-12 gap-12 items-center">
+                <div className="lg:col-span-5 lg:order-1">
+                  <div className="relative">
+                    <div className="bg-gradient-to-br from-purple-50 to-pink-100 rounded-2xl p-8 shadow-lg border border-purple-100">
+                      <div className="w-16 h-16 bg-purple-500 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                        </svg>
+                      </div>
+                      <h4 className="text-lg font-semibold text-gray-900 text-center mb-3">AI-Powered Intelligence</h4>
+                      <p className="text-gray-600 text-center text-sm leading-relaxed">
+                        Smart recommendations, drug interactions, and personalized health insights powered by advanced algorithms.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="lg:col-span-7 lg:order-2 space-y-8">
+                  <div className="flex items-center space-x-4 mb-8 lg:justify-end">
+                    <div className="h-px bg-gray-200 flex-1"></div>
+                    <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
+                      <span className="text-purple-600 font-semibold">02</span>
+                    </div>
+                  </div>
+                  <h3 className="text-3xl font-light text-gray-900 mb-6 lg:text-right">
+                    Enhanced by <span className="font-semibold">Innovation</span>
+                  </h3>
+                  <p className="text-xl text-gray-600 leading-relaxed mb-8 lg:text-right">
+                    Technology amplifies trust, never replaces it. Our AI assistant, medicine scanner, and digital health records 
+                    make healthcare more intelligent and accessible.
+                  </p>
+                  <div className="flex items-center space-x-8 lg:justify-end">
+                    <div className="text-center">
+                      <div className="text-2xl font-semibold text-gray-900">AI</div>
+                      <div className="text-sm text-gray-500">Assistant</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-semibold text-gray-900">Smart</div>
+                      <div className="text-sm text-gray-500">Scanner</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-semibold text-gray-900">Digital</div>
+                      <div className="text-sm text-gray-500">Records</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 3 - Care */}
+            <div className="group">
+              <div className="grid lg:grid-cols-12 gap-12 items-center">
+                <div className="lg:col-span-7 space-y-8">
+                  <div className="flex items-center space-x-4 mb-8">
+                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                      <span className="text-green-600 font-semibold">03</span>
+                    </div>
+                    <div className="h-px bg-gray-200 flex-1"></div>
+                  </div>
+                  <h3 className="text-3xl font-light text-gray-900 mb-6">
+                    Delivered with <span className="font-semibold">Care</span>
+                  </h3>
+                  <p className="text-xl text-gray-600 leading-relaxed mb-8">
+                    From prescription counseling to 24/7 app access, every touchpoint is designed around your health and convenience. 
+                    Professional care that adapts to your lifestyle.
+                  </p>
+                  <div className="flex items-center space-x-8">
+                    <div className="text-center">
+                      <div className="text-2xl font-semibold text-gray-900">24/7</div>
+                      <div className="text-sm text-gray-500">Access</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-semibold text-gray-900">Expert</div>
+                      <div className="text-sm text-gray-500">Guidance</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-semibold text-gray-900">Personal</div>
+                      <div className="text-sm text-gray-500">Service</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="lg:col-span-5">
+                  <div className="relative">
+                    <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-8 shadow-lg border border-green-100">
+                      <div className="w-16 h-16 bg-green-500 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                      </div>
+                      <h4 className="text-lg font-semibold text-gray-900 text-center mb-3">Personalized Care</h4>
+                      <p className="text-gray-600 text-center text-sm leading-relaxed">
+                        Every interaction is tailored to your unique health needs, preferences, and lifestyle for optimal care outcomes.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Subtle Background Elements */}
+        <div className="absolute top-1/3 -left-32 w-64 h-64 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+        <div className="absolute bottom-1/3 -right-32 w-64 h-64 bg-purple-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+      </section>
+
+      {/* About Us Section - Refined & Professional */}
+      <section id="about" className="py-32 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-24">
+            <div className="inline-block">
+              <h2 className="text-4xl lg:text-5xl font-light text-gray-900 mb-6 tracking-wide">
+                About <span className="font-semibold">Health Hands</span>
+              </h2>
+              <div className="w-16 h-0.5 bg-gray-400 mx-auto"></div>
+            </div>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-20 items-center mb-24">
+            {/* Story */}
+            <div className="space-y-8">
+              <div className="space-y-6">
+                <p className="text-2xl font-light text-gray-700 leading-relaxed">
+                  We believe healthcare should be both 
+                  <span className="font-medium text-gray-900"> trusted and intelligent</span>.
+                </p>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  Founded on decades of pharmaceutical expertise, Health Hands Pharmacy bridges traditional care 
+                  with modern innovation. Every prescription, every consultation, every digital tool is designed 
+                  around one simple principle: your health, enhanced by technology, never compromised by it.
+                </p>
+              </div>
+              
+              <div className="pt-8">
+                <blockquote className="border-l-4 border-blue-500 pl-6">
+                  <p className="text-xl font-light text-gray-700 italic mb-3">
+                    "To inspire hope, and contribute to health and well-being that improves quality of life."
+                  </p>
+                  <footer className="text-gray-500 text-sm">Our Mission</footer>
+                </blockquote>
+              </div>
+            </div>
+
+            {/* Vision */}
+            <div className="bg-white rounded-2xl p-10 shadow-lg border border-gray-100">
+              <h3 className="text-2xl font-light text-gray-900 mb-8 text-center">
+                <span className="font-medium">Healthy People</span> in <span className="font-medium">Healthy Communities</span>
+              </h3>
+              
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 flex-shrink-0"></div>
+                  <p className="text-gray-600 leading-relaxed">
+                    Combining pharmaceutical excellence with cutting-edge health technology
+                  </p>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 flex-shrink-0"></div>
+                  <p className="text-gray-600 leading-relaxed">
+                    Making healthcare more accessible through our advanced mobile application
+                  </p>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-3 flex-shrink-0"></div>
+                  <p className="text-gray-600 leading-relaxed">
+                    Delivering personalized care that adapts to your lifestyle and needs
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Values Grid - Simplified */}
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center group">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-500 transition-colors duration-300">
+                <svg className="w-8 h-8 text-blue-500 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h4 className="text-lg font-medium text-gray-900 mb-3">Licensed Excellence</h4>
+              <p className="text-gray-600 text-sm leading-relaxed">Fully licensed pharmacy with rigorous quality standards and professional oversight</p>
+            </div>
+            
+            <div className="text-center group">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-purple-500 transition-colors duration-300">
+                <svg className="w-8 h-8 text-purple-500 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </div>
+              <h4 className="text-lg font-medium text-gray-900 mb-3">Smart Innovation</h4>
+              <p className="text-gray-600 text-sm leading-relaxed">AI-powered health tools designed by pharmacists for real-world healthcare needs</p>
+            </div>
+            
+            <div className="text-center group">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-green-500 transition-colors duration-300">
+                <svg className="w-8 h-8 text-green-500 group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+              </div>
+              <h4 className="text-lg font-medium text-gray-900 mb-3">Personal Care</h4>
+              <p className="text-gray-600 text-sm leading-relaxed">Individualized attention and care tailored to your unique health journey</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mobile App Showcase Section */}
+      <section className="py-32 bg-gradient-to-br from-indigo-50 via-white to-blue-50 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <div className="text-center mb-20">
+            <div className="inline-block">
+              <h2 className="text-4xl lg:text-5xl font-light text-gray-900 mb-6 tracking-wide">
+                Your Health, <span className="font-semibold text-indigo-600">Intelligently Enhanced</span>
+              </h2>
+              <div className="w-16 h-0.5 bg-indigo-600 mx-auto mb-8"></div>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                More than an app—it's your complete digital health companion. Built by pharmacists, 
+                powered by AI, designed for your life.
+              </p>
+            </div>
+          </div>
+
+          {/* Main App Showcase */}
+          <div className="grid lg:grid-cols-12 gap-16 items-center mb-24">
+            {/* Left - App Features */}
+            <div className="lg:col-span-7 space-y-12">
+              {/* Feature 1 - AI Assistant */}
+              <div className="group">
+                <div className="flex items-start space-x-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-semibold text-gray-900 mb-3">AI Health Assistant</h3>
+                    <p className="text-gray-600 text-lg leading-relaxed mb-4">
+                      Get instant health guidance, drug interaction checks, and personalized recommendations. 
+                      Like having a pharmacist in your pocket, 24/7.
+                    </p>
+                    <div className="flex items-center space-x-4 text-sm text-gray-500">
+                      <span className="flex items-center space-x-1">
+                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                        <span>Real-time responses</span>
+                      </span>
+                      <span className="flex items-center space-x-1">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                        <span>Drug interactions</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Feature 2 - Medicine Scanner */}
+              <div className="group">
+                <div className="flex items-start space-x-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h-4" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-semibold text-gray-900 mb-3">Smart Medicine Scanner</h3>
+                    <p className="text-gray-600 text-lg leading-relaxed mb-4">
+                      Point your camera at any medication to instantly verify authenticity and get complete information. 
+                      Advanced anti-counterfeiting technology keeps you safe.
+                    </p>
+                    <div className="flex items-center space-x-4 text-sm text-gray-500">
+                      <span className="flex items-center space-x-1">
+                        <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                        <span>QR & Barcode</span>
+                      </span>
+                      <span className="flex items-center space-x-1">
+                        <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
+                        <span>Authenticity check</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Feature 3 - Health Records */}
+              <div className="group">
+                <div className="flex items-start space-x-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-semibold text-gray-900 mb-3">Complete Health Records</h3>
+                    <p className="text-gray-600 text-lg leading-relaxed mb-4">
+                      Store and organize blood tests, radiology reports, and vital signs all in one secure place. 
+                      Your complete health history, always accessible.
+                    </p>
+                    <div className="flex items-center space-x-4 text-sm text-gray-500">
+                      <span className="flex items-center space-x-1">
+                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                        <span>Lab results</span>
+                      </span>
+                      <span className="flex items-center space-x-1">
+                        <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
+                        <span>Vitals tracking</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right - Phone Mockup with App Screens */}
+            <div className="lg:col-span-5 flex justify-center">
+              <div className="relative">
+                {/* Phone Frame */}
+                <div className="w-80 h-[600px] bg-gradient-to-b from-gray-800 to-gray-900 rounded-[2.5rem] p-3 shadow-2xl">
+                  <div className="w-full h-full bg-gradient-to-br from-indigo-50 to-blue-100 rounded-[2.2rem] relative overflow-hidden">
+                    {/* Status Bar */}
+                    <div className="flex justify-between items-center px-6 py-3 text-black text-xs">
+                      <span className="font-medium">9:41</span>
+                      <div className="flex items-center space-x-1">
+                        <div className="flex space-x-0.5">
+                          <div className="w-1 h-2 bg-black rounded-full"></div>
+                          <div className="w-1 h-2 bg-black rounded-full"></div>
+                          <div className="w-1 h-2 bg-black rounded-full opacity-60"></div>
+                          <div className="w-1 h-2 bg-black rounded-full opacity-30"></div>
+                        </div>
+                        <div className="w-6 h-3 border border-black rounded-sm ml-1">
+                          <div className="w-4 h-2 bg-black rounded-sm ml-0.5 mt-0.5"></div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* App Header */}
+                    <div className="px-6 mb-6">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="flex items-center space-x-3">
+                          <Image
+                            src="/Logo.png"
+                            alt="Health Hands"
+                            width={36}
+                            height={36}
+                            className="rounded-lg"
+                          />
+                          <div>
+                            <h3 className="font-bold text-gray-900 text-sm">Health Hands</h3>
+                            <p className="text-xs text-gray-600">Your Health Partner</p>
+                          </div>
+                        </div>
+                        <div className="w-8 h-8 bg-indigo-500 rounded-full flex items-center justify-center">
+                          <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-5 5 5-5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                          </svg>
+                        </div>
+                      </div>
+                      
+                      {/* Search Bar */}
+                      <div className="bg-white rounded-2xl p-3 mb-6 shadow-sm border border-gray-100">
+                        <div className="flex items-center space-x-3 text-gray-400">
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                          </svg>
+                          <span className="text-xs">Search medicines...</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Feature Cards */}
+                    <div className="px-6 space-y-3">
+                      <div className="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl p-4 text-white shadow-lg">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <h4 className="font-semibold text-sm mb-1">AI Assistant</h4>
+                            <p className="text-xs opacity-90">Ask any health question</p>
+                          </div>
+                          <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl p-4 text-white shadow-lg">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <h4 className="font-semibold text-sm mb-1">Scan Medicine</h4>
+                            <p className="text-xs opacity-90">Verify authenticity</p>
+                          </div>
+                          <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h-4" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-4 text-white shadow-lg">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <h4 className="font-semibold text-sm mb-1">Health Records</h4>
+                            <p className="text-xs opacity-90">All your data, organized</p>
+                          </div>
+                          <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl p-4 text-white shadow-lg">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <h4 className="font-semibold text-sm mb-1">Emergency</h4>
+                            <p className="text-xs opacity-90">Instant access to help</p>
+                          </div>
+                          <div className="w-10 h-10 bg-white/20 rounded-xl flex items-center justify-center">
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Additional Features Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 text-center group hover:shadow-xl transition-all duration-300">
+              <div className="w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                </svg>
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-3">Prescription Upload</h4>
+              <p className="text-gray-600 text-sm leading-relaxed">Capture and submit prescriptions instantly with your camera</p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 text-center group hover:shadow-xl transition-all duration-300">
+              <div className="w-14 h-14 bg-gradient-to-br from-yellow-500 to-orange-600 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-3">Health Education</h4>
+              <p className="text-gray-600 text-sm leading-relaxed">Disease database, health tips, and educational videos</p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 text-center group hover:shadow-xl transition-all duration-300">
+              <div className="w-14 h-14 bg-gradient-to-br from-rose-500 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-3">TelePharmacist</h4>
+              <p className="text-gray-600 text-sm leading-relaxed">Direct consultation with licensed pharmacists</p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 text-center group hover:shadow-xl transition-all duration-300">
+              <div className="w-14 h-14 bg-gradient-to-br from-teal-500 to-green-600 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-3">Order Tracking</h4>
+              <p className="text-gray-600 text-sm leading-relaxed">Real-time updates from order to delivery</p>
+            </div>
+          </div>
+
+          {/* App Download CTA */}
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 rounded-3xl p-12 shadow-2xl">
+              <h3 className="text-3xl md:text-4xl font-semibold text-white mb-6">
+                Download the Future of Healthcare
+              </h3>
+              <p className="text-indigo-100 text-xl mb-8 max-w-2xl mx-auto">
+                Everything you need for better health—in one intelligent, secure, and easy-to-use app.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <button className="bg-white hover:bg-gray-50 text-gray-900 px-10 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg cursor-pointer flex items-center space-x-3">
+                  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.9 17.39C17.64 18.59 16.89 19.15 16.69 19.93C16.64 20.16 16.55 20.26 16.3 20.26C16.05 20.26 15.85 20.16 15.75 19.93C15.56 19.15 14.8 18.59 14.55 17.39C14.25 16.04 14.8 14.68 15.7 14.23L16.3 13.93C16.55 13.93 16.85 14.03 17.05 14.23C17.95 14.68 18.5 16.04 18.2 17.39H17.9ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z"/>
+                  </svg>
+                  <span>Download for Android</span>
+                </button>
+                <div className="text-indigo-200 text-sm">
+                  Available on Google Play Store
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Background Elements */}
+        <div className="absolute top-1/4 -left-32 w-64 h-64 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+        <div className="absolute bottom-1/4 -right-32 w-64 h-64 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+      </section>
+
+      {/* Final CTA Section - Elegant & Compelling */}
+      <section className="py-24 bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 relative overflow-hidden">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <div className="space-y-8">
+            <div className="space-y-6">
+              <h3 className="text-4xl md:text-5xl font-light text-white leading-tight">
+                Ready to experience 
+                <span className="font-medium">better healthcare</span>?
+              </h3>
+              <div className="w-16 h-0.5 bg-blue-400 mx-auto"></div>
+              <p className="text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed">
+                Join thousands who trust Health Hands Pharmacy for authentic medicines, expert care, 
+                and intelligent health tools.
+              </p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">
+              <button className="bg-white hover:bg-gray-50 text-gray-900 px-10 py-4 rounded-lg font-medium text-lg transition-all duration-300 shadow-lg cursor-pointer border border-gray-200">
+                Download Our App
+              </button>
+              <button className="border border-white/30 hover:bg-white/10 text-white px-10 py-4 rounded-lg font-medium text-lg transition-all duration-300 cursor-pointer backdrop-blur-sm">
+                Visit Our Store
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        {/* Subtle Background */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-800/10 to-transparent"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+      </section>
     </div>
   );
 }
