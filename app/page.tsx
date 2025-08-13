@@ -968,7 +968,7 @@ export default function Home() {
                     </svg>
                   </div>
                   <p className="text-gray-600 mt-3 leading-relaxed">
-                    Unlike typical delivery services, we're a licensed physical pharmacy with decades of pharmaceutical expertise. 
+                    Unlike typical delivery services, we&apos;re a licensed physical pharmacy with decades of pharmaceutical expertise. 
                     Our team includes qualified pharmacists who provide professional consultations, drug interaction checks, 
                     and personalized health guidance combined with cutting-edge technology.
                   </p>
@@ -1042,7 +1042,7 @@ export default function Home() {
             {[
               {
                 question: "What are your pharmacy hours?",
-                answer: "We're open Monday through Saturday from 9:00 AM to 8:00 PM. We're closed on Sundays. WhatsApp consultations are available during our operating hours."
+                answer: "We&apos;re open Monday through Saturday from 9:00 AM to 8:00 PM. We&apos;re closed on Sundays. WhatsApp consultations are available during our operating hours."
               },
               {
                 question: "Is the mobile app free to download?",
