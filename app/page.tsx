@@ -32,185 +32,64 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[75vh]">
-            {/* Left Content */}
-            <div className="space-y-10">
-              <div className="space-y-6 mt-8">
-                <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-                  <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-                  Trusted Healthcare Partner
-                </div>
-                <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                  Your Trusted Pharmacy,
-                  <span className="text-blue-600 block">Now in Your Pocket</span>
-                </h1>
-                <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
-                  Authentic medicines, expert care, advanced health tools — all from one trusted source.
-                </p>
+          {/* Centered Hero Content */}
+          <div className="text-center max-w-4xl mx-auto min-h-[75vh] flex flex-col justify-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                Trusted Healthcare Partner
               </div>
-
+              
+              <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 leading-tight">
+                Your Trusted Pharmacy,
+                <span className="text-blue-600 block">Now in Your Pocket</span>
+              </h1>
+              
+              <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                Authentic medicines, expert care, advanced health tools — all from one trusted source.
+              </p>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 mt-8">
-                <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl cursor-pointer">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
+                <button className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl cursor-pointer">
                   Visit Our Store
                 </button>
-                <button className="border-2 border-gray-300 hover:border-blue-600 text-gray-700 hover:text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 cursor-pointer">
-                  View All Services
+                <button className="border-2 border-gray-300 hover:border-blue-600 text-gray-700 hover:text-blue-600 px-10 py-5 rounded-xl font-semibold text-lg transition-all duration-300 cursor-pointer">
+                  Download App
                 </button>
               </div>
 
-              {/* Trust Badge Strip */}
-              <div className="flex flex-wrap items-center gap-6 pt-6 border-t border-gray-200">
-                <div className="flex items-center space-x-2">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                    <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {/* Trust Badges - Centered */}
+              <div className="flex flex-wrap justify-center items-center gap-8 pt-12 mt-12 border-t border-gray-200">
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                    <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
                   </div>
-                  <span className="text-sm font-medium text-gray-700">Licensed Pharmacy</span>
+                  <span className="text-base font-medium text-gray-700">Licensed Pharmacy</span>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                    <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                    <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
-                  <span className="text-sm font-medium text-gray-700">100% Genuine Medicines</span>
+                  <span className="text-base font-medium text-gray-700">100% Genuine Medicines</span>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
-                    <svg className="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="flex items-center space-x-3">
+                  <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
+                    <svg className="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                     </svg>
                   </div>
-                  <span className="text-sm font-medium text-gray-700">Professional Care</span>
+                  <span className="text-base font-medium text-gray-700">Professional Care</span>
                 </div>
-              </div>
-            </div>
-
-            {/* Right Content - Phone Mockup */}
-            <div className="relative lg:flex justify-center items-center hidden">
-              <div className="relative">
-                {/* Phone Frame - Modern Android Style */}
-                <div className="w-72 h-[580px] bg-black rounded-[2.5rem] p-2 shadow-2xl relative">
-                  {/* Screen */}
-                  <div className="w-full h-full bg-gradient-to-br from-blue-50 to-green-50 rounded-[2.2rem] relative overflow-hidden">
-                    {/* Status Bar */}
-                    <div className="flex justify-between items-center px-6 py-3 text-black text-xs">
-                      <span className="font-medium">9:41</span>
-                      <div className="flex items-center space-x-1">
-                        <div className="flex space-x-0.5">
-                          <div className="w-1 h-2 bg-black rounded-full"></div>
-                          <div className="w-1 h-2 bg-black rounded-full"></div>
-                          <div className="w-1 h-2 bg-black rounded-full opacity-60"></div>
-                          <div className="w-1 h-2 bg-black rounded-full opacity-30"></div>
-                        </div>
-                        <div className="w-6 h-3 border border-black rounded-sm ml-1">
-                          <div className="w-4 h-2 bg-black rounded-sm ml-0.5 mt-0.5"></div>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    {/* App Content */}
-                    <div className="px-5 pt-2">
-                      {/* App Header */}
-                      <div className="flex items-center space-x-3 mb-5">
-                        <Image
-                          src="/Logo.png"
-                          alt="Health Hands Pharmacy"
-                          width={36}
-                          height={36}
-                          className="rounded-lg"
-                        />
-                        <div>
-                          <h3 className="font-bold text-gray-900">Health Hands</h3>
-                          <p className="text-xs text-gray-600">Your Health Partner</p>
-                        </div>
-                      </div>
-                      
-                      {/* Search Bar */}
-                      <div className="bg-white rounded-xl p-3 mb-4 shadow-sm">
-                        <div className="flex items-center space-x-2 text-gray-400">
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                          </svg>
-                          <span className="text-xs">Search medicines...</span>
-                        </div>
-                      </div>
-                      
-                      {/* Feature Cards */}
-                      <div className="space-y-3">
-                        <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl p-3 text-white">
-                          <div className="flex items-center justify-between">
-                            <div>
-                              <h4 className="font-semibold text-sm">AI Assistant</h4>
-                              <p className="text-xs opacity-90">Health guidance</p>
-                            </div>
-                            <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
-                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                              </svg>
-                            </div>
-                          </div>
-                        </div>
-                        
-                        <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-xl p-3 text-white">
-                          <div className="flex items-center justify-between">
-                            <div>
-                              <h4 className="font-semibold text-sm">Scan Medicine</h4>
-                              <p className="text-xs opacity-90">Instant identification</p>
-                            </div>
-                            <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
-                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
-                              </svg>
-                            </div>
-                          </div>
-                        </div>
-                        
-                        <div className="bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl p-3 text-white">
-                          <div className="flex items-center justify-between">
-                            <div>
-                              <h4 className="font-semibold text-sm">Health Records</h4>
-                              <p className="text-xs opacity-90">Track your data</p>
-                            </div>
-                            <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
-                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                              </svg>
-                            </div>
-                          </div>
-                        </div>
-                        
-                        <div className="bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl p-3 text-white">
-                          <div className="flex items-center justify-between">
-                            <div>
-                              <h4 className="font-semibold text-sm">Prescription Upload</h4>
-                              <p className="text-xs opacity-90">Easy ordering</p>
-                            </div>
-                            <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
-                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
-                              </svg>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
               </div>
             </div>
           </div>
         </div>
 
-        {/* Background Decorations */}
-        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-        <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-green-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-64 h-64 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
       </section>
 
       {/* Experience Section - Professional Journey */}
@@ -784,37 +663,6 @@ export default function Home() {
         <div className="absolute bottom-1/4 -right-32 w-64 h-64 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
       </section>
 
-      {/* Final CTA Section - Elegant & Compelling */}
-      <section className="py-24 bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 relative overflow-hidden">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <div className="space-y-8">
-            <div className="space-y-6">
-              <h3 className="text-4xl md:text-5xl font-light text-white leading-tight">
-                Ready to experience 
-                <span className="font-medium">better healthcare</span>?
-              </h3>
-              <div className="w-16 h-0.5 bg-blue-400 mx-auto"></div>
-              <p className="text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed">
-                Join thousands who trust Health Hands Pharmacy for authentic medicines, expert care, 
-                and intelligent health tools.
-              </p>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">
-              <button className="bg-white hover:bg-gray-50 text-gray-900 px-10 py-4 rounded-lg font-medium text-lg transition-all duration-300 shadow-lg cursor-pointer border border-gray-200">
-                Download Our App
-              </button>
-              <button className="border border-white/30 hover:bg-white/10 text-white px-10 py-4 rounded-lg font-medium text-lg transition-all duration-300 cursor-pointer backdrop-blur-sm">
-                Visit Our Store
-              </button>
-            </div>
-          </div>
-        </div>
-        
-        {/* Subtle Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-800/10 to-transparent"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
-      </section>
     </div>
   );
 }
