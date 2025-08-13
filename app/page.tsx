@@ -5,6 +5,12 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
       {/* Hero Section */}
       <section className="relative pt-8 pb-16 overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-32 w-80 h-80 bg-gradient-to-r from-blue-300/20 to-indigo-300/20 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
+          <div className="absolute -bottom-8 -left-32 w-80 h-80 bg-gradient-to-r from-green-300/20 to-emerald-300/20 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-purple-300/20 to-pink-300/20 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
+        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Navigation Header */}
           <div className="flex justify-between items-center mb-12">
@@ -21,42 +27,76 @@ export default function Home() {
               </div>
             </div>
             <div className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
-              <a href="#about" className="text-gray-600 hover:text-blue-600 transition-colors cursor-pointer">About</a>
-              <a href="#services" className="text-gray-600 hover:text-blue-600 transition-colors cursor-pointer">Services</a>
-              <a href="#contact" className="text-gray-600 hover:text-blue-600 transition-colors cursor-pointer">Contact</a>
+              <a href="#services" className="text-gray-600 hover:text-blue-600 transition-all duration-300 cursor-pointer hover:scale-105">Services</a>
+              <a href="#about" className="text-gray-600 hover:text-blue-600 transition-all duration-300 cursor-pointer hover:scale-105">About</a>
+              <a href="#app" className="text-gray-600 hover:text-blue-600 transition-all duration-300 cursor-pointer hover:scale-105">App</a>
             </div>
             <div>
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl cursor-pointer">
+              <a 
+                href="https://play.google.com/store/apps/details?id=com.healthhandspharmacy.healthhands" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl cursor-pointer"
+              >
                 Download App
-              </button>
+              </a>
             </div>
           </div>
 
           {/* Centered Hero Content */}
-          <div className="text-center max-w-4xl mx-auto min-h-[75vh] flex flex-col justify-center">
-            <div className="space-y-8">
-              <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-                Trusted Healthcare Partner
+          <div className="relative text-center max-w-5xl mx-auto min-h-[75vh] flex flex-col justify-center z-10">
+            <div className="space-y-8 animate-fade-in-up">
+              <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 backdrop-blur-sm border border-blue-200/50 text-blue-700 rounded-full text-sm font-semibold shadow-lg">
+                <svg className="w-4 h-4 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+                Trusted Healthcare Partner Since Day One
               </div>
               
-              <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 leading-tight">
-                Your Trusted Pharmacy,
-                <span className="text-blue-600 block">Now in Your Pocket</span>
-              </h1>
+              <div className="relative">
+                <h1 className="text-5xl lg:text-8xl font-black text-gray-900 leading-none mb-4">
+                  <span className="block animate-text-reveal">Health in Your</span>
+                  <span className="block bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent animate-text-reveal animation-delay-200">
+                    Hands
+                  </span>
+                </h1>
+                {/* Decorative elements */}
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full opacity-60"></div>
+                <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full opacity-40"></div>
+              </div>
               
-              <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                Authentic medicines, expert care, advanced health tools — all from one trusted source.
+              <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed max-w-4xl mx-auto font-light animate-text-reveal animation-delay-400">
+                Where <span className="font-semibold text-blue-600">authentic medicines</span> meet 
+                <span className="font-semibold text-indigo-600"> intelligent technology</span> — 
+                creating the future of personalized healthcare.
               </p>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
-                <button className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl cursor-pointer">
+              <div className="flex flex-col sm:flex-row gap-6 justify-center mt-12 animate-fade-in-up animation-delay-600">
+                <a 
+                  href="https://www.google.com/maps/place/Health+Hands+Pharmacy/@24.9411445,67.1234564,18z/data=!3m1!4b1!4m6!3m5!1s0x3eb339c82b062d6f:0x1be0f6023e21528!8m2!3d24.9411445!4d67.1242068!16s%2Fg%2F11vz5g_snw?entry=ttu&g_ep=EgoyMDI1MDgxMC4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="group relative inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-12 py-5 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl overflow-hidden"
+                >
+                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-400 to-indigo-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
+                  <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
                   Visit Our Store
-                </button>
-                <button className="border-2 border-gray-300 hover:border-blue-600 text-gray-700 hover:text-blue-600 px-10 py-5 rounded-xl font-semibold text-lg transition-all duration-300 cursor-pointer">
+                </a>
+                <a 
+                  href="https://play.google.com/store/apps/details?id=com.healthhandspharmacy.healthhands"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="group relative inline-flex items-center justify-center border-2 border-gray-300 hover:border-transparent bg-white hover:bg-gradient-to-r hover:from-indigo-500 hover:to-purple-500 text-gray-700 hover:text-white px-12 py-5 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                >
+                  <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                  </svg>
                   Download App
-                </button>
+                </a>
               </div>
 
               {/* Trust Badges - Centered */}
@@ -93,7 +133,7 @@ export default function Home() {
       </section>
 
       {/* Experience Section - Professional Journey */}
-      <section className="py-32 bg-white relative overflow-hidden">
+      <section id="services" className="py-32 bg-white relative overflow-hidden scroll-smooth">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Elegant Header */}
           <div className="text-center mb-24">
@@ -122,7 +162,7 @@ export default function Home() {
                   </h3>
                   <p className="text-xl text-gray-600 leading-relaxed mb-8">
                     Every prescription, every consultation, every interaction is grounded in decades of pharmaceutical expertise. 
-                    We're not just licensed—we're trusted custodians of your health.
+                    We&apos;re not just licensed—we&apos;re trusted custodians of your health.
                   </p>
                   <div className="flex items-center space-x-8">
                     <div className="text-center">
@@ -294,7 +334,7 @@ export default function Home() {
               <div className="pt-8">
                 <blockquote className="border-l-4 border-blue-500 pl-6">
                   <p className="text-xl font-light text-gray-700 italic mb-3">
-                    "To inspire hope, and contribute to health and well-being that improves quality of life."
+                    &quot;To inspire hope, and contribute to health and well-being that improves quality of life.&quot;
                   </p>
                   <footer className="text-gray-500 text-sm">Our Mission</footer>
                 </blockquote>
@@ -366,7 +406,7 @@ export default function Home() {
       </section>
 
       {/* Mobile App Showcase Section */}
-      <section className="py-32 bg-gradient-to-br from-indigo-50 via-white to-blue-50 relative overflow-hidden">
+      <section id="app" className="py-32 bg-gradient-to-br from-indigo-50 via-white to-blue-50 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center mb-20">
@@ -376,7 +416,7 @@ export default function Home() {
               </h2>
               <div className="w-16 h-0.5 bg-indigo-600 mx-auto mb-8"></div>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                More than an app—it's your complete digital health companion. Built by pharmacists, 
+                More than an app—it&apos;s your complete digital health companion. Built by pharmacists, 
                 powered by AI, designed for your life.
               </p>
             </div>
@@ -644,14 +684,22 @@ export default function Home() {
                 Everything you need for better health—in one intelligent, secure, and easy-to-use app.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <button className="bg-white hover:bg-gray-50 text-gray-900 px-10 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg cursor-pointer flex items-center space-x-3">
-                  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M17.9 17.39C17.64 18.59 16.89 19.15 16.69 19.93C16.64 20.16 16.55 20.26 16.3 20.26C16.05 20.26 15.85 20.16 15.75 19.93C15.56 19.15 14.8 18.59 14.55 17.39C14.25 16.04 14.8 14.68 15.7 14.23L16.3 13.93C16.55 13.93 16.85 14.03 17.05 14.23C17.95 14.68 18.5 16.04 18.2 17.39H17.9ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z"/>
+                <a 
+                  href="https://play.google.com/store/apps/details?id=com.healthhandspharmacy.healthhands"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="group bg-white hover:bg-gray-50 text-gray-900 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl cursor-pointer flex items-center space-x-3"
+                >
+                  <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
                   </svg>
-                  <span>Download for Android</span>
-                </button>
+                  <div className="text-left">
+                    <div className="text-xs text-gray-600 leading-tight">Get it on</div>
+                    <div className="text-lg font-bold leading-tight">Google Play</div>
+                  </div>
+                </a>
                 <div className="text-indigo-200 text-sm">
-                  Available on Google Play Store
+                  Available now • Free download
                 </div>
               </div>
             </div>
