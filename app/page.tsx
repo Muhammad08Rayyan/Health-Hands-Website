@@ -920,7 +920,7 @@ export default function Home() {
             {[
               {
                 question: "What are your pharmacy hours?",
-                answer: "We&apos;re open Monday through Saturday from 9:00 AM to 8:00 PM. We&apos;re closed on Sundays. WhatsApp consultations are available during our operating hours."
+                answer: "We are open Monday through Saturday from 9:00 AM to 8:00 PM. We&apos;re closed on Sundays. WhatsApp consultations are available during our operating hours."
               },
               {
                 question: "Is the mobile app free to download?",
