@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import { useEffect } from "react";
-import FloatingContactWidget from "./components/FloatingContactWidget";
-import Footer from "./components/Footer";
+import FloatingContactWidget from "../components/FloatingContactWidget";
+import Footer from "../components/Footer";
 
 export default function Home() {
 
