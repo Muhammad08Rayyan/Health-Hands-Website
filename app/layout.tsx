@@ -22,9 +22,38 @@ export const metadata: Metadata = {
   },
   description: "Health Hands Pharmacy provides comprehensive healthcare services, prescription medications, health consultations, and medical supplies. Your trusted pharmacy for quality healthcare solutions.",
   keywords: [
-    "pharmacy", "prescription", "medication", "healthcare", "medical supplies",
-    "health consultation", "prescription delivery", "online pharmacy",
-    "health services", "pharmaceutical care", "medicine", "health products"
+    // Core Pharmacy Terms
+    "Health Hands Pharmacy", "Health Hands", "pharmacy Pakistan", "online pharmacy", "digital pharmacy", 
+    "pharmacy app", "mobile pharmacy", "e-pharmacy", "virtual pharmacy", "smart pharmacy",
+    
+    // Location-Based
+    "pharmacy Karachi", "pharmacy Lahore", "pharmacy Islamabad", "pharmacy Rawalpindi", 
+    "pharmacy delivery Pakistan", "medicine delivery", "prescription delivery", "nationwide pharmacy",
+    
+    // App Features
+    "Health Hands App", "pharmacy mobile app", "prescription scanner", "medicine tracker", 
+    "pill reminder app", "medication management", "digital prescription", "virtual consultation",
+    "AI health assistant", "telemedicine Pakistan", "telepharmacy", "online doctor consultation",
+    
+    // Services & Features
+    "prescription refill", "medicine home delivery", "24/7 pharmacy", "emergency medicine",
+    "chronic disease management", "diabetes care", "blood pressure monitoring", "health screening",
+    "vaccination services", "health checkup", "medical devices", "surgical supplies",
+    
+    // Technology Features
+    "digital health records", "electronic prescription", "QR prescription", "contactless delivery",
+    "real-time tracking", "medicine authenticity", "expiry date alerts", "dosage reminders",
+    "drug interaction checker", "medicine information", "pharmacist consultation online",
+    
+    // Healthcare Solutions
+    "maternal health", "child healthcare", "elderly care", "preventive healthcare", 
+    "wellness products", "vitamins supplements", "medical equipment rental", "home healthcare",
+    "chronic medication", "specialty pharmacy", "cold chain medicines", "temperature controlled storage",
+    
+    // Business Terms
+    "licensed pharmacy Pakistan", "authentic medicines", "FDA approved", "quality assurance",
+    "insurance accepted", "affordable healthcare", "trusted pharmacy", "reliable medicine delivery",
+    "professional pharmacists", "medication counseling", "health education", "patient care"
   ],
   authors: [{ name: "Health Hands Pharmacy" }],
   creator: "Health Hands Pharmacy",
@@ -40,7 +69,7 @@ export const metadata: Metadata = {
     url: "https://healthhandspharmacy.com",
     siteName: "Health Hands Pharmacy",
     title: "Health Hands Pharmacy - Your Trusted Healthcare Partner",
-    description: "Comprehensive healthcare services, prescription medications, and medical consultations. Download our app for convenient pharmacy services.",
+    description: "Comprehensive healthcare services, prescription medications, and medical consultations across Pakistan. Download our app for convenient nationwide pharmacy services.",
     images: [
       {
         url: "/Logo.png",
@@ -53,7 +82,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Health Hands Pharmacy - Your Trusted Healthcare Partner",
-    description: "Comprehensive healthcare services, prescription medications, and medical consultations.",
+    description: "Comprehensive healthcare services, prescription medications, and medical consultations across Pakistan.",
     images: ["/Logo.png"],
     creator: "@healthhandspharmacy",
   },
@@ -165,38 +194,102 @@ export default function RootLayout({
                 }
               ],
               "serviceArea": {
-                "@type": "GeoCircle",
-                "geoMidpoint": {
-                  "@type": "GeoCoordinates",
-                  "latitude": "24.9411445",
-                  "longitude": "67.1242068"
-                },
-                "geoRadius": "25000"
+                "@type": "Country",
+                "name": "Pakistan"
               },
-              "areaServed": "Karachi, Pakistan",
+              "areaServed": [
+                {
+                  "@type": "Country",
+                  "name": "Pakistan"
+                },
+                {
+                  "@type": "City", 
+                  "name": "Karachi"
+                },
+                {
+                  "@type": "City",
+                  "name": "Lahore"
+                },
+                {
+                  "@type": "City",
+                  "name": "Islamabad"
+                },
+                {
+                  "@type": "City",
+                  "name": "Rawalpindi"
+                },
+                {
+                  "@type": "City",
+                  "name": "Faisalabad"
+                },
+                {
+                  "@type": "City",
+                  "name": "Multan"
+                },
+                {
+                  "@type": "City",
+                  "name": "Peshawar"
+                },
+                {
+                  "@type": "City",
+                  "name": "Quetta"
+                }
+              ],
               "makesOffer": [
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
                     "name": "Prescription Medications",
-                    "description": "Full range of prescription medications with professional consultation"
+                    "description": "Full range of prescription medications with AI-powered verification and professional consultation"
                   }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Health Consultations",
-                    "description": "Professional health consultations and medication reviews"
+                    "name": "Digital Health Consultations",
+                    "description": "AI-assisted health consultations, telemedicine, and virtual pharmacist reviews via mobile app"
                   }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Medical Supplies",
-                    "description": "Wide range of medical supplies and health products"
+                    "name": "Medicine Home Delivery",
+                    "description": "Contactless nationwide medicine delivery with real-time tracking and temperature-controlled storage"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Digital Prescription Management",
+                    "description": "QR code prescriptions, electronic health records, and automated refill reminders"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Chronic Disease Management",
+                    "description": "Specialized care for diabetes, hypertension, and other chronic conditions with medication tracking"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Maternal & Child Healthcare",
+                    "description": "Specialized pharmacy services for mother and baby care with expert guidance"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Medical Equipment & Devices",
+                    "description": "Blood pressure monitors, glucometers, and other medical devices with home delivery"
                   }
                 }
               ],
@@ -228,19 +321,45 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "MobileApplication",
               "name": "Health Hands Pharmacy App",
+              "description": "Revolutionary pharmacy app with AI health assistant, digital prescriptions, medicine tracking, and nationwide delivery in Pakistan",
               "operatingSystem": "Android",
               "applicationCategory": "HealthApplication",
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.5",
-                "reviewCount": "100"
-              },
+              "applicationSubCategory": "MedicalApplication",
+              "keywords": "pharmacy app, medicine delivery, prescription scanner, AI health assistant, telemedicine, digital health records",
+              "featureList": [
+                "AI-powered health assistant",
+                "Digital prescription scanning",
+                "Medicine authenticity verification", 
+                "Automated refill reminders",
+                "Virtual pharmacist consultation",
+                "Real-time delivery tracking",
+                "Electronic health records",
+                "Drug interaction checker",
+                "Pill reminder notifications",
+                "Emergency medicine ordering",
+                "Chronic disease management",
+                "Temperature-controlled delivery",
+                "QR code prescriptions",
+                "Contactless payment",
+                "24/7 customer support"
+              ],
               "offers": {
                 "@type": "Offer",
                 "price": "0.00",
-                "priceCurrency": "PKR"
+                "priceCurrency": "PKR",
+                "availability": "https://schema.org/InStock"
               },
-              "downloadUrl": "https://play.google.com/store/apps/details?id=com.healthhandspharmacy.healthhands"
+              "downloadUrl": "https://play.google.com/store/apps/details?id=com.healthhandspharmacy.healthhands",
+              "screenshot": "/Logo.png",
+              "softwareVersion": "1.0",
+              "fileSize": "20MB",
+              "contentRating": "Everyone",
+              "country": "PK",
+              "inLanguage": "en",
+              "publisher": {
+                "@type": "Organization",
+                "name": "Health Hands Pharmacy"
+              }
             }])
           }}
         />
